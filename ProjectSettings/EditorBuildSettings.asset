@@ -5,7 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+    path: Assets/Scenes/MainMap.unity
+    guid: 84f10acab757a1f41a683c187625cc3b
+  - enabled: 1
+    path: Assets/Scenes/Anger.unity
+    guid: a47490b451f9fcf46b2b5bb6d276039c
+  - enabled: 1
+    path: Assets/Scenes/Fear.unity
+    guid: 3523cf9fc571ed241b759d8f1e930f2e
+  - enabled: 1
+    path: Assets/Scenes/Joy.unity
+    guid: 87270541c42646d468cc75d086103d54
+  - enabled: 1
+    path: Assets/Scenes/Sadness.unity
+    guid: d64e961d8b8355e40906c0fb7b6f79dd
