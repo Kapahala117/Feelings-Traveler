@@ -16,17 +16,22 @@ public class PlayerMovement : MonoBehaviour {
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
+        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+
+        transform.Rotate(0, x, 0);
+        transform.Translate(0, 0, z);
+        /*if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log("He hecho click, JOPUTA");
+            
             RaycastHit hit;
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000))
             {
                 agent.destination = hit.point;
-                Debug.Log("Tengo que moverme, joputilla");
+                
                 
             }
-        }
+        }*/
     }
 }
