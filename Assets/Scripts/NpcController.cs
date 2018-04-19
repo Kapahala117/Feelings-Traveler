@@ -21,7 +21,7 @@ public class NpcController : MonoBehaviour {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit))
             {
-                if (Vector3.Distance(player.transform.position,this.transform.position)<10.0f) { 
+                if (Vector3.Distance(player.transform.position,this.transform.position)<2.0f) { 
                     if (hit.transform.gameObject.tag == "Npc")
                     {
                         Debug.Log("HOLIS");
