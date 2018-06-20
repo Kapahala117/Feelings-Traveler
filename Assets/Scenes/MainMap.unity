@@ -6708,9 +6708,10 @@ GameObject:
   - component: {fileID: 204617699}
   - component: {fileID: 204617698}
   - component: {fileID: 204617697}
+  - component: {fileID: 204617701}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: JoyZone
+  m_TagString: Skybox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6781,6 +6782,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: -9.570001, z: 0}
+--- !u!114 &204617701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 204617696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bfa0d69492dbb4dbcaed5eee652bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterSkybox: {fileID: 2100000, guid: 59998d46d34ccf340be71d5a79eec445, type: 2}
+  exitSkybox: {fileID: 2100000, guid: 4323fde32dbcebf4195ad58c05f28e84, type: 2}
 --- !u!1001 &204946954
 Prefab:
   m_ObjectHideFlags: 0
@@ -26661,9 +26675,10 @@ GameObject:
   - component: {fileID: 755967079}
   - component: {fileID: 755967078}
   - component: {fileID: 755967077}
+  - component: {fileID: 755967081}
   m_Layer: 0
-  m_Name: Cube (2)
-  m_TagString: Untagged
+  m_Name: SadnessZone
+  m_TagString: Skybox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26734,6 +26749,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: -18.699001, z: 0}
+--- !u!114 &755967081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 755967076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bfa0d69492dbb4dbcaed5eee652bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterSkybox: {fileID: 2100000, guid: 3a8c5fa081c5a974b9fffa93e4230ece, type: 2}
+  exitSkybox: {fileID: 2100000, guid: 4323fde32dbcebf4195ad58c05f28e84, type: 2}
 --- !u!1001 &757666358
 Prefab:
   m_ObjectHideFlags: 0
@@ -29183,10 +29211,6 @@ Prefab:
     - target: {fileID: 4227823217855616, guid: 0ba46e223007e14429117a5ef478313e, type: 2}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4227823217855616, guid: 0ba46e223007e14429117a5ef478313e, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 130.15201
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0ba46e223007e14429117a5ef478313e, type: 2}
@@ -32096,6 +32120,51 @@ Prefab:
     - target: {fileID: 4070718121235860, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
       propertyPath: m_LocalScale.z
       value: 1.9846629
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -0.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.017129248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.07688543
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.0013211071
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.996892
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -1.945
+      objectReference: {fileID: 0}
+    - target: {fileID: 20477222914514066, guid: 3f9e099f407430249996fa4671c5a01b,
+        type: 2}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -8.826
+      objectReference: {fileID: 0}
+    - target: {fileID: 4700666812265374, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0.30200002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f9e099f407430249996fa4671c5a01b, type: 2}
@@ -35523,9 +35592,10 @@ GameObject:
   - component: {fileID: 989060727}
   - component: {fileID: 989060726}
   - component: {fileID: 989060725}
+  - component: {fileID: 989060729}
   m_Layer: 0
-  m_Name: Cube (3)
-  m_TagString: Untagged
+  m_Name: FearZone
+  m_TagString: Skybox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35596,6 +35666,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 110.816, z: 0}
+--- !u!114 &989060729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989060724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bfa0d69492dbb4dbcaed5eee652bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterSkybox: {fileID: 2100000, guid: a93d27d74f0fb574f9bbb6a2dbc86e97, type: 2}
+  exitSkybox: {fileID: 2100000, guid: 4323fde32dbcebf4195ad58c05f28e84, type: 2}
 --- !u!1001 &991165790
 Prefab:
   m_ObjectHideFlags: 0
@@ -40919,9 +41002,10 @@ GameObject:
   - component: {fileID: 1170203045}
   - component: {fileID: 1170203044}
   - component: {fileID: 1170203043}
+  - component: {fileID: 1170203047}
   m_Layer: 0
-  m_Name: Cube (1)
-  m_TagString: Untagged
+  m_Name: AngerZone
+  m_TagString: Skybox
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40992,6 +41076,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: -9.570001, z: 0}
+--- !u!114 &1170203047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1170203042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bfa0d69492dbb4dbcaed5eee652bec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enterSkybox: {fileID: 2100000, guid: 1d3f5254e25764546b2211aa1dd32efe, type: 2}
+  exitSkybox: {fileID: 2100000, guid: 4323fde32dbcebf4195ad58c05f28e84, type: 2}
 --- !u!1001 &1172814584
 Prefab:
   m_ObjectHideFlags: 0
