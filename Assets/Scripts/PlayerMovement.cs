@@ -6,6 +6,8 @@ using UnityEngine.AI;
 public class PlayerMovement : MonoBehaviour {
 
     NavMeshAgent agent;
+    float z;
+    public bool moving;
 
     void Start()
     {
@@ -17,21 +19,12 @@ public class PlayerMovement : MonoBehaviour {
     void Update()
     {
         var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+        if (Input.GetKeyDown(KeyCode.S)){ z = Input.GetAxis("Vertical") * Time.deltaTime *1.5f; }
 
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);
-        /*if (Input.GetMouseButtonDown(0))
-        {
-            
-            RaycastHit hit;
 
-            if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 1000))
-            {
-                agent.destination = hit.point;
-                
-                
-            }
-        }*/
+        
     }
 }

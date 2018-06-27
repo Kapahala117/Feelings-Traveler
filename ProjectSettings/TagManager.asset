@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Npc
   - Skybox
+  - Bird
+  - Inner
+  - Outter
+  - Forward
   layers:
   - Default
   - TransparentFX

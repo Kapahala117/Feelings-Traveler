@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: bcf1512e7acb782448e0b7b3c29d1e53
-timeCreated: 1529235071
+guid: d8b2a79d46af35f4cbf55b48eb997df7
+timeCreated: 1529938324
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
@@ -212,7 +212,7 @@ ModelImporter:
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
-    animationDoRetargetingWarnings: 0
+    animationDoRetargetingWarnings: 1
     importAnimatedCustomProperties: 0
     animationCompression: 3
     animationRotationError: 0.5
@@ -276,7 +276,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0
