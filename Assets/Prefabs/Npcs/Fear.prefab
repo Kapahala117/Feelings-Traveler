@@ -1522,6 +1522,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cc2f26fbd382584487c620a2d43fb3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameController: {fileID: 0}
+  flowchart: {fileID: 0}
+  AngerC: 0
+  SadnessC: 0
+  FearC: 0
 --- !u!136 &136856308296308286
 CapsuleCollider:
   m_ObjectHideFlags: 1

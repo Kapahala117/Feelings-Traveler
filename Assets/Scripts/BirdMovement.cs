@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using Fungus;
 
 public class BirdMovement : MonoBehaviour {
 
@@ -10,6 +11,7 @@ public class BirdMovement : MonoBehaviour {
     public bool playerIn;
     PlayerMovement playermovement;
     GameObject inner;
+    public Flowchart flowchart;
  
    
 	// Use this for initialization
@@ -26,6 +28,7 @@ public class BirdMovement : MonoBehaviour {
 	void Update () {
         if (playerIn) {
             nav.SetDestination(inner.transform.position);
+            flowchart.SendFungusMessage("FollowBird");
             
         }
             

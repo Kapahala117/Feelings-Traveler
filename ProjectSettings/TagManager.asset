@@ -10,6 +10,7 @@ TagManager:
   - Inner
   - Outter
   - Forward
+  - NeutralZone
   layers:
   - Default
   - TransparentFX

@@ -17,13 +17,13 @@ public class AnimatorControllerPlayer : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.UpArrow))
+        if ((Input.GetKeyDown(KeyCode.W)|| Input.GetKeyDown(KeyCode.UpArrow)) && !playermovement.talking)
         {
             playerAnimator.SetBool("Moving", true);
             playerAnimator.SetBool("MovingB", false);
             playermovement.moving = true;
         }
-        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        else if ((Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow)) && !playermovement.talking)
         {
             playerAnimator.SetBool("MovingB", true);
             playerAnimator.SetBool("Moving", false);

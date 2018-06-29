@@ -24,6 +24,7 @@ public class SkyboxChange : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        
         if (playerIn)
         {
             //tOut = 0;
@@ -32,12 +33,13 @@ public class SkyboxChange : MonoBehaviour {
                 tIn += Time.deltaTime * 0.3f;
             }
 
-            blendFactor = Mathf.Lerp(1, 0, tIn);
+            blendFactor = Mathf.Lerp(0, 1, tIn);
             RenderSettings.skybox.SetFloat("_Blend", blendFactor);
+           
 
-            RenderSettings.ambientSkyColor = Color.Lerp(RenderSettings.ambientSkyColor, skyColor, tIn*0.5f);
-            RenderSettings.ambientEquatorColor = Color.Lerp(RenderSettings.ambientEquatorColor, equatorColor, tIn*0.5f);
-            RenderSettings.ambientGroundColor = Color.Lerp(RenderSettings.ambientGroundColor, groundColor, tIn*0.5f);
+            RenderSettings.ambientSkyColor = Color.Lerp(RenderSettings.ambientSkyColor, skyColor, tIn * 0.5f);
+            RenderSettings.ambientEquatorColor = Color.Lerp(RenderSettings.ambientEquatorColor, equatorColor, tIn * 0.5f);
+            RenderSettings.ambientGroundColor = Color.Lerp(RenderSettings.ambientGroundColor, groundColor, tIn * 0.5f);
             
 
         }
@@ -49,12 +51,12 @@ public class SkyboxChange : MonoBehaviour {
             {
                 tOut += Time.deltaTime * 0.3f;
             }
-            blendFactor = Mathf.Lerp(0, 1, tOut);
-            RenderSettings.skybox.SetFloat("_Blend", blendFactor);
+            /*blendFactor = Mathf.Lerp(0, 1, tOut);
+            RenderSettings.skybox.SetFloat("_Blend", blendFactor);*/
 
-            RenderSettings.ambientSkyColor = Color.Lerp(RenderSettings.ambientSkyColor, exitSkyColor, changeTime * Time.deltaTime);
-            RenderSettings.ambientEquatorColor = Color.Lerp(RenderSettings.ambientEquatorColor, exitEquatorColor, changeTime * Time.deltaTime);
-            RenderSettings.ambientGroundColor = Color.Lerp(RenderSettings.ambientGroundColor, exitGroundColor, changeTime * Time.deltaTime);
+            RenderSettings.ambientSkyColor = Color.Lerp(RenderSettings.ambientSkyColor, exitSkyColor, tOut * 0.05f);
+            RenderSettings.ambientEquatorColor = Color.Lerp(RenderSettings.ambientEquatorColor, exitEquatorColor, tOut * 0.05f);
+            RenderSettings.ambientGroundColor = Color.Lerp(RenderSettings.ambientGroundColor, exitGroundColor, tOut * 0.05f);
 
         }
     }
@@ -91,7 +93,7 @@ public class SkyboxChange : MonoBehaviour {
     {
         if (other.tag == "Player")
         {
-            blendFactor = 1;
+            //blendFactor = 1;
             tIn = 0;
             playerIn = false;
             playerOut = true;

@@ -22,25 +22,27 @@ public class BirdFly : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if (!playermovement.moving)
+        if (Time.timeScale != 0)
         {
-            float newY = Mathf.Sin(Time.time * speed);
-            transform.position = new Vector3(transform.position.x, (newY * height) + forw.transform.position.y, transform.position.z);
-            //transform.LookAt(player.transform);
-            Quaternion rot = Quaternion.LookRotation(player.transform.position-transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * 2);
+            if (!playermovement.moving)
+            {
+                float newY = Mathf.Sin(Time.time * speed);
+                transform.position = new Vector3(transform.position.x, (newY * height) + forw.transform.position.y, transform.position.z);
+                //transform.LookAt(player.transform);
+                Quaternion rot = Quaternion.LookRotation(player.transform.position - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rot, Time.deltaTime * 2);
+
+            }
+            else
+            {
+                float newY = Mathf.Sin(Time.time * speed * 0.5f);
+                transform.position = new Vector3(transform.position.x, (newY * height) + forw.transform.position.y, transform.position.z);
+                //transform.LookAt(forward.transform);
+                Quaternion rot1 = Quaternion.LookRotation(forw.transform.position - transform.position);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rot1, Time.deltaTime * 2);
+            }
 
         }
-        else {
-            float newY = Mathf.Sin(Time.time * speed*0.5f);
-            transform.position = new Vector3(transform.position.x, (newY * height) + forw.transform.position.y, transform.position.z);
-            //transform.LookAt(forward.transform);
-            Quaternion rot1 = Quaternion.LookRotation(forw.transform.position-transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rot1, Time.deltaTime * 2);
-        }
-
-        
             
     }
 }
