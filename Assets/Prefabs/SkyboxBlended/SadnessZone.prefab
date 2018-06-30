@@ -53,9 +53,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enterSkybox: {fileID: 2100000, guid: 8e68f71fc6412054a9f90f39fa7759c0, type: 2}
-  skyColor: {r: 0.7283141, g: 0.4602076, b: 0.8235294, a: 0}
-  equatorColor: {r: 0.32312337, g: 0, b: 0.7941176, a: 0}
+  exitSkybox: {fileID: 2100000, guid: 4323fde32dbcebf4195ad58c05f28e84, type: 2}
+  sun: {fileID: 0}
+  skyColor: {r: 0.517838, g: 0.4602076, b: 0.8235294, a: 0}
+  equatorColor: {r: 0.19168314, g: 0, b: 0.7941176, a: 0}
   groundColor: {r: 0.025659345, g: 0, b: 0.33823532, a: 0}
+  enterLightColor: {r: 0.61267763, g: 0.5808823, b: 1, a: 0}
+  exitLightColor: {r: 1, g: 1, b: 1, a: 0}
   exitSkyColor: {r: 0.86666673, g: 0.9450981, b: 1, a: 0}
   exitEquatorColor: {r: 0.11764707, g: 0.48235297, b: 1, a: 0}
   exitGroundColor: {r: 0.24313727, g: 0.14509805, b: 0, a: 0}

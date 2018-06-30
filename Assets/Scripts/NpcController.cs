@@ -12,6 +12,7 @@ public class NpcController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        
         player = GameObject.FindGameObjectWithTag("Player");
         SadnessC = gameController.sadnessComplete;
         AngerC = gameController.angerComplete;
@@ -53,10 +54,42 @@ public class NpcController : MonoBehaviour {
                                 
                                 break;
                             case "FearChar":
-                                flowchart.SendFungusMessage("FearDialog");
+                                if (AngerC && !SadnessC)
+                                {
+                                    flowchart.SendFungusMessage("FearAnger");
+                                }
+                                else if (SadnessC && !AngerC)
+                                {
+                                    flowchart.SendFungusMessage("AngerSadness");
+                                }
+
+                                else if (SadnessC && AngerC)
+                                {
+                                    flowchart.SendFungusMessage("FearBoth");
+                                }
+                                else
+                                {
+                                    flowchart.SendFungusMessage("FearOnly");
+                                }
                                 break;
                             case "SadChar":
-                                flowchart.SendFungusMessage("SadnessDialog");
+                                if (FearC && !AngerC)
+                                {
+                                    flowchart.SendFungusMessage("SadnessFear");
+                                }
+                                else if (AngerC && !FearC)
+                                {
+                                    flowchart.SendFungusMessage("SadnessAnger");
+                                }
+
+                                else if (AngerC && FearC)
+                                {
+                                    flowchart.SendFungusMessage("SadnessBoth");
+                                }
+                                else
+                                {
+                                    flowchart.SendFungusMessage("SadnessOnly");
+                                }
                                 break;
 
                         }

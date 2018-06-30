@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class ButtonManager : MonoBehaviour {
     public Canvas mainCanvas;
+    
     // Use this for initialization
     void Start () {
-        mainCanvas.enabled = true;
+        mainCanvas.enabled = true;    
     }
 	
 	// Update is called once per frame

@@ -11,6 +11,9 @@ TagManager:
   - Outter
   - Forward
   - NeutralZone
+  - OutterFear
+  - OutterSadness
+  - OutterAnger
   layers:
   - Default
   - TransparentFX
