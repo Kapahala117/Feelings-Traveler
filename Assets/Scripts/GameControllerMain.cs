@@ -8,11 +8,13 @@ using Fungus;
 public class GameControllerMain : MonoBehaviour {
 
     public Canvas pauseCanvas,gameCanvas,optionsCanvas,pausaCanvas,opcionesCanvas;
-    public GameObject helpImage;
+    public GameObject helpImage,joyZone,angerItem,sadnessItem,fearItem;
     public Image joyImage,angerImage,sadnessImage,fearImage;
-    public bool angerComplete, joyComplete, sadnessComplete, fearComplete;
+    public bool angerComplete, joyComplete, sadnessComplete, fearComplete,item;
     public Localization localization;
     public string language;
+    GameObject[] deleteZones;
+    BirdMovement birdMovement;
 
   
     // Use this for initialization
@@ -23,9 +25,16 @@ public class GameControllerMain : MonoBehaviour {
         pausaCanvas.enabled = false;
         opcionesCanvas.enabled = false;
         language = "ES";
-        
-        
-	}
+        joyZone.SetActive(false);
+
+        angerItem = GameObject.Find("AngerItem");
+        sadnessItem = GameObject.Find("SadnessItem");
+        fearItem = GameObject.Find("FearItem");
+        angerItem.SetActive(false);
+        sadnessItem.SetActive(false);
+        fearItem.SetActive(false);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -33,11 +42,64 @@ public class GameControllerMain : MonoBehaviour {
         {
             Pause();
         }
-        if (angerComplete) angerImage.enabled=true; 
-        if (sadnessComplete) sadnessImage.enabled = true; ;
-        if (fearComplete) fearImage.enabled = true; ;
-        if (joyComplete) joyImage.enabled = true; 
+        if (angerComplete)
+        {
+            deleteZones = GameObject.FindGameObjectsWithTag("OutterAnger");
+            foreach (GameObject zone in deleteZones)
+            {
+                zone.SetActive(false);
+            }
+            angerImage.enabled = true;
+            
+            
+            
+        }
+        if (sadnessComplete) {
+            deleteZones = GameObject.FindGameObjectsWithTag("OutterSadness");
+            foreach (GameObject zone in deleteZones)
+            {
+                Destroy(zone);
+            }
+            sadnessImage.enabled = true;
+            
+        }
+        if (fearComplete)
+        {
+            deleteZones = GameObject.FindGameObjectsWithTag("OutterFear");
+            foreach (GameObject zone in deleteZones)
+            {
+                Destroy(zone);
+            }
+            fearImage.enabled = true;
+        }
+        if (joyComplete)
+        {
+            joyImage.enabled = true;
+        }
+
+        if (fearComplete && sadnessComplete && angerComplete) joyZone.SetActive(true);
+
 	}
+
+    public void CompleteAnger()
+    {
+        angerComplete = true;
+    }
+
+    public void CompleteSadness()
+    {
+        sadnessComplete = true;
+    }
+
+    public void CompleteFear()
+    {
+        fearComplete = true;
+    }
+
+    public void CompleteJoy()
+    {
+        joyComplete = true;
+    }
 
     public void Pause()
     {

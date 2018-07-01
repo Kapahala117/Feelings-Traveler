@@ -5,11 +5,15 @@ using UnityEngine;
 public class InfluenceZone : MonoBehaviour {
 
     BirdMovement bird;
+    public GameObject zone;
+    
 
 	// Use this for initialization
 	void Start () {
 
         bird = GameObject.FindGameObjectWithTag("Bird").GetComponent<BirdMovement>();
+        
+        
 	}
 	
 	// Update is called once per frame
@@ -20,7 +24,10 @@ public class InfluenceZone : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
+        {
             bird.playerIn = true;
+            bird.zone = zone.GetComponent<Transform>();
+        }
     }
 
     void OnTriggerStay(Collider other)

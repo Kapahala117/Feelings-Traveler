@@ -10,8 +10,11 @@ public class BirdMovement : MonoBehaviour {
     NavMeshAgent nav;
     public bool playerIn;
     PlayerMovement playermovement;
+    public InfluenceZone influenceZone;
     GameObject inner;
     public Flowchart flowchart;
+    //GameObject zone;
+    public Transform zone;
  
    
 	// Use this for initialization
@@ -21,13 +24,13 @@ public class BirdMovement : MonoBehaviour {
         nav.enabled = true;
         inner = GameObject.FindGameObjectWithTag("Inner");
         playermovement = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        
+       // zone = influenceZone.zone;
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (playerIn) {
-            nav.SetDestination(inner.transform.position);
+            nav.SetDestination(zone.position);
             flowchart.SendFungusMessage("FollowBird");
             
         }

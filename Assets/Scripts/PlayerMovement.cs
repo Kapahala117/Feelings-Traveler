@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour {
     float z;
     public bool moving;
     public bool talking;
+    
 
     void Start()
     {
