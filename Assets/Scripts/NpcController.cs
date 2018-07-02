@@ -15,6 +15,7 @@ public class NpcController : MonoBehaviour {
     NavMeshAgent nav;
     bool AngerMoved, SadnessMoved, FearMoved;
     PlayerMovement playerMovement;
+    Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class NpcController : MonoBehaviour {
         AngerMoved = false;
         FearMoved = false;
         playerMovement = player.GetComponent<PlayerMovement>();
+        GetComponent<Animator>();
 
     }
 	
@@ -39,15 +41,18 @@ public class NpcController : MonoBehaviour {
         if (this.name == "Father" && !birdMovement.playerIn && AngerC && !AngerMoved) {
             nav.Warp(angerDest.position);
             AngerMoved = true;
+            anim.SetBool("End", true);
                 }
         if (this.name == "Daughter" && !birdMovement.playerIn && FearC && !FearMoved) {
             nav.Warp(fearDest.position);
             FearMoved = true;
+            anim.SetBool("End", true);
         }
         if (this.name == "Son" && !birdMovement.playerIn && SadnessC && !SadnessMoved)
         {
             nav.Warp(sadnessDest.position);
             SadnessMoved = true;
+            anim.SetBool("End", true);
         }
 
         if (Input.GetMouseButtonDown(0)&& Time.timeScale == 1 && !playerMovement.talking)
@@ -121,7 +126,7 @@ public class NpcController : MonoBehaviour {
                                 }
                                 else if (SadnessC && !AngerC)
                                 {
-                                    flowchart.SendFungusMessage("AngerSadness");
+                                    flowchart.SendFungusMessage("FearSadness");
                                     gameController.fearItem.SetActive(true);
                                 }
 

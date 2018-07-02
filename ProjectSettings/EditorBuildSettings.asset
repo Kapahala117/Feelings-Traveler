@@ -13,16 +13,16 @@ EditorBuildSettings:
     guid: 84f10acab757a1f41a683c187625cc3b
   - enabled: 0
     path: 
-    guid: a47490b451f9fcf46b2b5bb6d276039c
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: 3523cf9fc571ed241b759d8f1e930f2e
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: 87270541c42646d468cc75d086103d54
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: d64e961d8b8355e40906c0fb7b6f79dd
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 21608cc102438e6468b09cf59d3bcf5f

@@ -24,7 +24,8 @@ public class GameControllerMain : MonoBehaviour {
         optionsCanvas.enabled = false;
         pausaCanvas.enabled = false;
         opcionesCanvas.enabled = false;
-        language = "ES";
+        language = "EN";
+        localization.SetActiveLanguage("EN", true);
         joyZone.SetActive(false);
 
         angerItem = GameObject.Find("AngerItem");
