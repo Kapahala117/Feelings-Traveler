@@ -26,7 +26,7 @@ public class NpcController : MonoBehaviour {
         AngerMoved = false;
         FearMoved = false;
         playerMovement = player.GetComponent<PlayerMovement>();
-        GetComponent<Animator>();
+        anim = GetComponent<Animator>();
 
     }
 	
